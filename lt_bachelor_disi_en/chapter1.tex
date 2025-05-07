@@ -7,17 +7,20 @@ The principal objective of this thesis project was the design of a \textbf{time 
 
 \section{SPADs}
 \label{sec:tdc-spads}
-Rather unintuitively, the best method to introduce what a TDC is to first speak about one of the main areas where it can be of need. \\ \\
+Rather unintuitively, the best method to introduce what a TDC is to first speak about one of the main areas where it can be of need.
+
 A Single Photon Avalanche Diode (in short - SPAD) is based on a semiconductor PN junction that can be triggered by different kind of radiations, such as the visible light (such diodes are also referred as photodiodes). In particular circuits, this device can be set up so that when a single photon hits the diode, a so called \textbf{avalanche} is formed. The diode is set close to an equilibrium position so that when the photons arrive a chain effect is formed. The diode is able to conduct a large amount of current which can then be sensed by a \textbf{front-end} circuit.
-\\ \\
+
 SPADs have many applications, such as LIDARs, low light imaging, PET scanning, fluorescence microscopy and many more.
 
 
 \section{The TDC}
 \label{sec:tdc-introduction}
-In all the applications mentioned above there is, often, the need to measure the \textbf{time arrival} or \textbf{time of flight} of photons. For example, in a LIDAR, a photon is sent toward an object, while the TDC starts counting. When the photon is then reflected back to the device we can have a measure of how long the photon has flown (\textbf{Time of Flight}). This measure is useful to reconstruct the distance of an object, and thus, with proper iterations, an image of a space.
+In all the applications mentioned above there is, often, the need to measure the \textbf{time arrival} or \textbf{time of flight} of photons. For example, in a LIDAR, a photon is sent toward an object, while the TDC starts counting. When the photon is then reflected back to the device we can have a measure of how long the photon has flown (\textbf{Time of Flight}). This measure is useful to reconstruct the distance of an object, and thus, with proper iterations, an image of space.
 
+There may be multiple reasons to use a TDC. First of all, sometimes one is not interested in measuring an absolute time, like in the date - hour format, but it wants to measure the time interval between two events (i.e time arrival of photons). Also, there are some scientific domains where usual devices, like standard clock modules used in many computers or micro-controllers, do not have the necessary resolution in order to register events, that often happen in the realm of the nanoseconds, if not less.
 
+It comes in handy then, to develop a specific device with the sole purpose of registering these events. This is where a Time to Digital Controller is used.
 
 \section{Applications of SPADs and TDCs}
 \label{sec:tdc-examples}
@@ -27,6 +30,15 @@ bla \\ bla \\ bla
 \section{An Overview of TDC Designs}
 
 \section{The need for a low cost FPGA based TDC}
+\label{sec:fpga-tdc}
+In this case, succeeding in the creation of a TDC directly in an FPGA can be beneficial. The benefits are, for example:
+\begin{itemize}
+    \item An increased performance, compared to micro-controllers or general purpose computers
+    \item reduced overall costs
+\end{itemize}
+An example, was this work from my supervisor Alessandro Tontini \cite{tdc-tontini}, which tests the creation of such a device on a Xilinx Spartan 6 FPGA.
+
+My role in this thesis, was to \textbf{port} this design in a newer technology, the AMD Xilinx Artix 7 FPGA. In the following pages I will describe the work that has been done in this sense.
 
 
 
