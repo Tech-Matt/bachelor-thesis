@@ -1,4 +1,4 @@
-\chapter{What even is a Time to Digital Converter?}
+\chapter{General Overview}
 \label{cha:tdc-intro}
 The principal objective of this thesis project was the design of a \textbf{time to digital converter}. But what is that? Why and where is it used for? This chapter provides a basic understanding of the researched device and of the ecosystem where it is generally used. Also, from now on, to make the reading easier, I will refer to the device as the TDC.
  
@@ -39,6 +39,22 @@ In this case, succeeding in the creation of a TDC directly in an FPGA can be ben
 An example, was this work from my supervisor Alessandro Tontini \cite{tdc-tontini}, which tests the creation of such a device on a Xilinx Spartan 6 FPGA.
 
 My role in this thesis, was to \textbf{port} this design in a newer technology, the AMD Xilinx Artix 7 FPGA. In the following pages I will describe the work that has been done in this sense.
+
+
+\section{Design and Testing Process}
+
+Here provide a short description of everything you have done and the steps followed.
+
+More or less the process has been:
+
+\begin{itemize}
+    \item Minimum setup to load xdc files through opal kelly interface
+    \item Vivado Design
+    \item Setup communication between Vivado and C++
+    \item Setup communication between C++ and Matlab
+    \item Characterization
+    \item Results
+\end{itemize}
 
 
 
