@@ -19,13 +19,44 @@
 \usepackage{epsfig}
 \usepackage{plain}
 \usepackage{setspace}
+
 % ----------  User-defined imports  ------------ %
 \usepackage[document]{ragged2e} % To text-align left all document
 \usepackage{parskip}            % To add paragraph spacing
+\usepackage{listings}
+\usepackage{xcolor}
 % -------- End of User-defined Imports --------- %
+
 \usepackage[paperheight=29.7cm,paperwidth=21cm,outer=1.5cm,inner=2.5cm,top=2cm,bottom=2cm]{geometry} % layout setting
 \usepackage{titlesec} % custom setup title of chanpter
 % \usepackage{newtxtext,newtxmath} % times new roman
+
+% -------- User Defined Settings --------------- %
+\definecolor{codegray}{gray}{0.95}
+\definecolor{commentgreen}{rgb}{0,0.5,0}
+\definecolor{keywordblue}{rgb}{0,0,0.8}
+\definecolor{stringred}{rgb}{0.6,0,0}
+
+% \lstdefinestyle{mystyle}{
+%     backgroundcolor=\color{codegray},   
+%     commentstyle=\color{commentgreen},
+%     keywordstyle=\color{keywordblue},
+%     numberstyle=\tiny\color{codegray},
+%     stringstyle=\color{stringred},
+%     basicstyle=\ttfamily\footnotesize,
+%     breakatwhitespace=false,         
+%     breaklines=true,                 
+%     captionpos=b,                    
+%     keepspaces=true,                 
+%     numbers=none,                    
+%     numbersep=5pt,                  
+%     showspaces=false,                
+%     showstringspaces=false,
+%     showtabs=false,                  
+%     tabsize=2
+% }
+
+% \lstset{style=mystyle}
 
 %%%%%%%%%%%%%%
 % support for accented letters
